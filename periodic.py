@@ -17,7 +17,4 @@ cur.execute("CREATE TABLE periodic(atomicnumber, element, symbol, atomicmass)")
 
 cur.executemany("INSERT INTO periodic VALUES(?, ?, ?, ?)", data)
 
-
-res = cur.execute("SELECT element FROM periodic WHERE atomicmass > 1")
-print(res.fetchall())
 con.commit()
